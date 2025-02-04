@@ -1,9 +1,13 @@
 /* Variáveis de Cor */
 :root {
-    --primary-color: #fafafa;
-    --secondary-color: #e3e3e3;
-    --accent-color: #ee6f57;
-    --highlight-color: #cb3737;
+    --background-color: #fafafa; /* Branco sujo */
+    --primary-text: #1a1a1a;    /* Preto suave */
+    --secondary-text: #4d4d4d;  /* Cinza escuro */
+    --hover-bg: #333333;        /* Preto para hover */
+    --hover-text: #ffffff;      /* Branco no hover */
+    --border-color: #e3e3e3;    /* Cinza claro */
+    --highlight-bg: #f0f0f0;    /* Fundo para blocos de código */
+    --highlight-border: #dcdcdc;/* Borda para blocos de código */
 }
 
 /* Reset básico */
@@ -14,9 +18,9 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: var(--primary-color);
-    color: #333;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-text);
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -27,6 +31,7 @@ header {
     width: 100%;
     padding: 20px;
     background: transparent;
+    border-bottom: 1px solid var(--border-color);
 }
 
 nav {
@@ -37,7 +42,7 @@ nav {
 
 nav h1 {
     font-size: 1.5rem;
-    color: var(--highlight-color);
+    color: var(--primary-text);
 }
 
 nav ul {
@@ -48,13 +53,29 @@ nav ul {
 
 nav ul li {
     cursor: pointer;
+    padding: 10px 15px;
+    color: var(--primary-text);
     position: relative;
-    color: var(--highlight-color);
     transition: color 0.3s ease;
 }
 
+nav ul li::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--hover-bg);
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+nav ul li:hover::before {
+    transform: scaleX(1);
+}
+
 nav ul li:hover {
-    color: var(--accent-color);
+    color: var(--hover-text);
 }
 
 /* Main Content */
@@ -66,16 +87,176 @@ main {
     align-items: center;
     text-align: center;
     gap: 10px;
+    padding: 20px;
 }
 
 main h1 {
-    font-size: 2rem;
-    color: var(--highlight-color);
+    font-size: 2.5rem;
+    color: var(--primary-text);
+    margin-bottom: 10px;
 }
 
 main h2 {
-    font-size: 1.5rem;
-    color: var(--accent-color);
+    font-size: 1.8rem;
+    color: var(--secondary-text);
+}
+
+/* Paleta de Cores */
+.color-palette {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 10px;
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+
+.color-box {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    cursor: pointer;
+    border: 1px solid var(--border-color);
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.color-box:hover {
+    transform: scale(1.05);
+}
+
+.color-code {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 2px 5px;
+    font-size: 0.8rem;
+    border-radius: 3px;
+    display: none;
+}
+
+.color-box:hover .color-code {
+    display: block;
+}
+
+.color-box a {
+    text-decoration: none;
+    color: var(--primary-text);
+    font-weight: bold;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    transition: background 0.3s ease;
+}
+
+.color-box a:hover {
+    background: var(--hover-bg);
+    color: var(--hover-text);
+}
+
+/* Fontes */
+.font-list {
+    margin-top: 20px;
+    text-align: left;
+    padding: 10px;
+}
+
+.font-item {
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 5px;
+    background: var(--highlight-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.font-item a {
+    color: var(--primary-text);
+    text-decoration: none;
+    border-bottom: 1px dashed var(--secondary-text);
+}
+
+.font-item a:hover {
+    color: var(--hover-bg);
+    border-bottom: 1px solid var(--hover-bg);
+}
+
+/* Blocos de Código */
+.code-block {
+    background-color: var(--highlight-bg);
+    border: 1px solid var(--highlight-border);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 20px 0;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    overflow-x: auto;
+    position: relative;
+}
+
+.code-block a {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: var(--hover-bg);
+    color: var(--hover-text);
+    padding: 5px 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.code-block a:hover {
+    background: var(--primary-text);
+}
+
+/* Comandos de Display e Position */
+.display-commands, .position-commands {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.command {
+    background-color: var(--highlight-bg);
+    border: 1px solid var(--highlight-border);
+    padding: 10px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--secondary-text);
+    position: relative;
+}
+
+.command a {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: var(--hover-bg);
+    color: var(--hover-text);
+    padding: 3px 8px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.75rem;
+}
+
+.command a:hover {
+    background: var(--primary-text);
 }
 
 /* Footer */
@@ -83,4 +264,25 @@ footer {
     padding: 10px;
     text-align: center;
     background: transparent;
+    border-top: 1px solid var(--border-color);
+    color: var(--secondary-text);
+}
+
+/* Scroll Suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scroll Customizado */
+.color-palette::-webkit-scrollbar {
+    width: 8px;
+}
+
+.color-palette::-webkit-scrollbar-thumb {
+    background-color: var(--hover-bg);
+    border-radius: 4px;
+}
+
+.color-palette::-webkit-scrollbar-track {
+    background: var(--highlight-bg);
 }

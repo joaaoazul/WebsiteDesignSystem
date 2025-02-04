@@ -4,31 +4,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Website Design System</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header>
         <nav>
             <h1>Website Design System v1.0</h1>
             <ul>
-                <li>Colors</li>
-                <li>Fonts</li>
-                <li>Text Styles</li>
-                <li>Display and Positions</li>
-                <li>Flexbox</li>
+                <li><a href="#colors">Colors</a></li>
+                <li><a href="#fonts">Fonts</a></li>
+                <li><a href="#text-styles">Text Styles</a></li>
+                <li><a href="#display-position">Display & Position</a></li>
+                <li><a href="#flexbox">Flexbox</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <h1>Bem vindo, ao sistema integrado de Web Design</h1>
-        <h2>Versão 1.0.0</h2>
-    </main>
-    <footer>
 
+    <main>
+        <h1>Bem-vindo ao Sistema Integrado de Web Design</h1>
+        <h2>Versão 1.0.0</h2>
+
+        <!-- Secção de Cores -->
+        <section id="colors">
+            <h2>Color Palette</h2>
+            <div class="color-palette">
+                <div class="color-box" style="background-color: #fafafa;"><span class="color-code">#fafafa</span></div>
+                <div class="color-box" style="background-color: #e3e3e3;"><span class="color-code">#e3e3e3</span></div>
+                <div class="color-box" style="background-color: #ee6f57;"><span class="color-code">#ee6f57</span></div>
+                <div class="color-box" style="background-color: #cb3737;"><span class="color-code">#cb3737</span></div>
+            </div>
+        </section>
+
+        <!-- Secção de Fontes -->
+        <section id="fonts">
+            <h2>Fonts</h2>
+            <div class="font-list">
+                <div class="font-item">
+                    <p style="font-family: 'Roboto', sans-serif;">Roboto</p>
+                    <a href="https://fonts.google.com/specimen/Roboto" target="_blank">Embed Link</a>
+                </div>
+                <div class="font-item">
+                    <p style="font-family: 'Open Sans', sans-serif;">Open Sans</p>
+                    <a href="https://fonts.google.com/specimen/Open+Sans" target="_blank">Embed Link</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Secção de Estilos de Texto -->
+        <section id="text-styles">
+            <h2>Text Styles</h2>
+            <div class="code-block">
+                <code>
+                    h1 {
+                        font-size: 2.5rem;
+                        font-weight: bold;
+                    }
+                </code>
+            </div>
+        </section>
+
+        <!-- Secção de Display & Position -->
+        <section id="display-position">
+            <h2>Display & Position Commands</h2>
+            <div class="display-commands">
+                <div class="command">display: flex;</div>
+                <div class="command">display: grid;</div>
+                <div class="command">display: block;</div>
+            </div>
+            <div class="position-commands">
+                <div class="command">position: relative;</div>
+                <div class="command">position: absolute;</div>
+                <div class="command">position: fixed;</div>
+            </div>
+        </section>
+
+        <!-- Secção Flexbox -->
+        <section id="flexbox">
+            <h2>Flexbox Example</h2>
+            <div class="code-block">
+                <code>
+                    .container {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                </code>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Website Design System</p>
     </footer>
 
-
+    <script src="./assets/js/script.js"></script>
 </body>
-
-<script src="./assets/js/script.js"></script>
 </html>
+
