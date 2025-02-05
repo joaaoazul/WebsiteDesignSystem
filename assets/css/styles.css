@@ -108,28 +108,27 @@ main h2 {
     gap: 15px;
     justify-content: center;
     margin-top: 20px;
-    padding: 10px;
-    max-height: 400px;
-    overflow-y: auto;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
 }
 
 .color-box {
-    width: 100px;
-    height: 100px;
+    width: 100%;
+    padding-top: 100%; /* Proporção 1:1 */
     position: relative;
     cursor: pointer;
     border: 1px solid var(--border-color);
     transition: transform 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
 }
 
 .color-box:hover {
     transform: scale(1.05);
+}
+
+.color-box .color-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .color-code {
@@ -148,41 +147,16 @@ main h2 {
     display: block;
 }
 
-.color-box a {
-    text-decoration: none;
-    color: var(--primary-text);
-    font-weight: bold;
-    position: absolute;
-    bottom: 5px;
-    right: 5px;
-    background: rgba(255, 255, 255, 0.8);
-    padding: 2px 5px;
-    border-radius: 3px;
-    font-size: 0.7rem;
-    transition: background 0.3s ease;
-}
-
-.color-box a:hover {
-    background: var(--hover-bg);
-    color: var(--hover-text);
-}
-
 /* Fontes */
 .font-list {
     margin-top: 20px;
     text-align: left;
-    padding: 10px;
 }
 
 .font-item {
     margin-bottom: 15px;
-    border: 1px solid var(--border-color);
-    padding: 10px;
-    border-radius: 5px;
-    background: var(--highlight-bg);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: relative;
+    cursor: pointer;
 }
 
 .font-item a {
@@ -191,9 +165,20 @@ main h2 {
     border-bottom: 1px dashed var(--secondary-text);
 }
 
-.font-item a:hover {
+.font-item:hover a {
     color: var(--hover-bg);
     border-bottom: 1px solid var(--hover-bg);
+}
+
+.font-details {
+    display: none;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+}
+
+.font-item.active .font-details {
+    display: block;
 }
 
 /* Blocos de Código */
@@ -206,23 +191,19 @@ main h2 {
     font-family: 'Courier New', Courier, monospace;
     text-align: left;
     overflow-x: auto;
+    cursor: pointer;
     position: relative;
 }
 
-.code-block a {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: var(--hover-bg);
-    color: var(--hover-text);
-    padding: 5px 10px;
-    border-radius: 3px;
-    text-decoration: none;
-    font-size: 0.8rem;
+.code-details {
+    display: none;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
 }
 
-.code-block a:hover {
-    background: var(--primary-text);
+.code-block.active .code-details {
+    display: block;
 }
 
 /* Comandos de Display e Position */
@@ -240,23 +221,18 @@ main h2 {
     border-radius: 5px;
     font-family: 'Courier New', Courier, monospace;
     color: var(--secondary-text);
-    position: relative;
+    cursor: pointer;
 }
 
-.command a {
-    position: absolute;
-    top: 5px;
-    right: 10px;
-    background: var(--hover-bg);
-    color: var(--hover-text);
-    padding: 3px 8px;
-    border-radius: 3px;
-    text-decoration: none;
-    font-size: 0.75rem;
+.command-details {
+    display: none;
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: var(--secondary-text);
 }
 
-.command a:hover {
-    background: var(--primary-text);
+.command.active .command-details {
+    display: block;
 }
 
 /* Footer */
@@ -268,21 +244,85 @@ footer {
     color: var(--secondary-text);
 }
 
-/* Scroll Suave */
-html {
-    scroll-behavior: smooth;
+/* Interatividade com JavaScript */
+.color-box, .font-item, .code-block, .command {
+    transition: all 0.3s ease;
 }
 
-/* Scroll Customizado */
-.color-palette::-webkit-scrollbar {
-    width: 8px;
+.color-box:active, .font-item:active, .code-block:active, .command:active {
+    transform: scale(0.98);
 }
 
-.color-palette::-webkit-scrollbar-thumb {
-    background-color: var(--hover-bg);
-    border-radius: 4px;
+
+
+
+
+
+@media (max-width: 768px) {
+    nav ul {
+        gap: 10px;
+    }
+
+    nav h1 {
+        font-size: 1.2rem;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+
+    main h2 {
+        font-size: 1.5rem;
+    }
+
+    .color-palette {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 10px;
+    }
+
+    .font-item {
+        font-size: 0.9rem;
+    }
+
+    .code-block, .command {
+        font-size: 0.85rem;
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 0.85rem;
+    }
 }
 
-.color-palette::-webkit-scrollbar-track {
-    background: var(--highlight-bg);
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    main h1 {
+        font-size: 1.8rem;
+    }
+
+    main h2 {
+        font-size: 1.3rem;
+    }
+
+    .color-palette {
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+    }
+
+    .font-item {
+        font-size: 0.8rem;
+    }
+
+    .code-block, .command {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    footer {
+        font-size: 0.8rem;
+    }
 }
