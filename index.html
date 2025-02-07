@@ -1,103 +1,152 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Design System</title>
-    <link rel="stylesheet" href="./assets/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Design System - Recurso Técnico</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <h1>Website Design System v1.0</h1>
-            <ul>
-                <li><a href="#colors">Colors</a></li>
-                <li><a href="#fonts">Fonts</a></li>
-                <li><a href="#text-styles">Text Styles</a></li>
-                <li><a href="#display-position">Display & Position</a></li>
-                <li><a href="#flexbox">Flexbox</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <h1>Website Design System v1.0</h1>
+      <ul>
+        <li><a href="#colors">Colors</a></li>
+        <li><a href="#fonts">Fonts</a></li>
+        <li><a href="#text-styles">Text Styles</a></li>
+        <li><a href="#display-position">Display & Position</a></li>
+        <li><a href="#flexbox">Flexbox</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <h1>Bem-vindo ao Sistema Integrado de Web Design</h1>
-        <h2>Versão 1.0.0</h2>
+  <main>
+    <h1>Bem-vindo ao Web Design System</h1>
+    <h2>Versão 1.1.0</h2>
 
-        <!-- Secção de Cores -->
-        <section id="colors">
-            <h2>Color Palette</h2>
-            <div class="color-palette">
-                <div class="color-box" style="background-color: #fafafa;"><span class="color-code">#fafafa</span></div>
-                <div class="color-box" style="background-color: #e3e3e3;"><span class="color-code">#e3e3e3</span></div>
-                <div class="color-box" style="background-color: #ee6f57;"><span class="color-code">#ee6f57</span></div>
-                <div class="color-box" style="background-color: #cb3737;"><span class="color-code">#cb3737</span></div>
-            </div>
-        </section>
+    <!-- Seção de Cores -->
+    <section id="colors">
+      <h2>Color Palette</h2>
+      <div class="color-palette">
+        <!-- Ampla variedade de cores -->
+        <div class="color-box" style="background-color: #fafafa;">
+          <span class="color-code">#fafafa</span>
+        </div>
+        <div class="color-box" style="background-color: #e3e3e3;">
+          <span class="color-code">#e3e3e3</span>
+        </div>
+        <div class="color-box" style="background-color: #ee6f57;">
+          <span class="color-code">#ee6f57</span>
+        </div>
+        <div class="color-box" style="background-color: #cb3737;">
+          <span class="color-code">#cb3737</span>
+        </div>
+        <div class="color-box" style="background-color: #007AFF;">
+          <span class="color-code">#007AFF</span>
+        </div>
+        <div class="color-box" style="background-color: #FF9500;">
+          <span class="color-code">#FF9500</span>
+        </div>
+        <div class="color-box" style="background-color: #FF2D55;">
+          <span class="color-code">#FF2D55</span>
+        </div>
+        <div class="color-box" style="background-color: #4CD964;">
+          <span class="color-code">#4CD964</span>
+        </div>
+        <div class="color-box" style="background-color: #5856D6;">
+          <span class="color-code">#5856D6</span>
+        </div>
+        <div class="color-box" style="background-color: #FFCC00;">
+          <span class="color-code">#FFCC00</span>
+        </div>
+      </div>
+    </section>
 
-        <!-- Secção de Fontes -->
-        <section id="fonts">
-            <h2>Fonts</h2>
-            <div class="font-list">
-                <div class="font-item">
-                    <p style="font-family: 'Roboto', sans-serif;">Roboto</p>
-                    <a href="https://fonts.google.com/specimen/Roboto" target="_blank">Embed Link</a>
-                </div>
-                <div class="font-item">
-                    <p style="font-family: 'Open Sans', sans-serif;">Open Sans</p>
-                    <a href="https://fonts.google.com/specimen/Open+Sans" target="_blank">Embed Link</a>
-                </div>
-            </div>
-        </section>
+    <!-- Seção de Fontes -->
+    <section id="fonts">
+      <h2>Fonts</h2>
+      <div class="font-list">
+        <div class="font-item">
+          <p style="font-family: 'Roboto', sans-serif;">Roboto</p>
+          <a href="https://fonts.google.com/specimen/Roboto" target="_blank">Embed Link</a>
+        </div>
+        <div class="font-item">
+          <p style="font-family: 'Open Sans', sans-serif;">Open Sans</p>
+          <a href="https://fonts.google.com/specimen/Open+Sans" target="_blank">Embed Link</a>
+        </div>
+      </div>
+    </section>
 
-        <!-- Secção de Estilos de Texto -->
-        <section id="text-styles">
-            <h2>Text Styles</h2>
-            <div class="code-block">
-                <code>
-                    h1 {
-                        font-size: 2.5rem;
-                        font-weight: bold;
-                    }
-                </code>
-            </div>
-        </section>
+    <!-- Seção de Estilos de Texto -->
+    <section id="text-styles">
+      <h2>Text Styles</h2>
+      <!-- Bloco interativo com explicação técnica -->
+      <div class="code-block interactive-box" data-explanation="Este código define o estilo dos títulos h1 utilizando 'font-size: 2.5rem' e 'font-weight: bold'.  
+Utilize estes valores para criar hierarquias visuais claras.">
+        <code>
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+        </code>
+      </div>
+    </section>
 
-        <!-- Secção de Display & Position -->
-        <section id="display-position">
-            <h2>Display & Position Commands</h2>
-            <div class="display-commands">
-                <div class="command">display: flex;</div>
-                <div class="command">display: grid;</div>
-                <div class="command">display: block;</div>
-            </div>
-            <div class="position-commands">
-                <div class="command">position: relative;</div>
-                <div class="command">position: absolute;</div>
-                <div class="command">position: fixed;</div>
-            </div>
-        </section>
+    <!-- Seção de Display & Position -->
+    <section id="display-position">
+      <h2>Display & Position Commands</h2>
+      <div class="display-commands">
+        <div class="command interactive-box" data-explanation="'display: flex;' organiza os elementos em linha ou coluna com flexibilidade.  
+Experimente os valores de 'justify-content' e 'align-items' para diferentes alinhamentos.">
+          display: flex;
+        </div>
+        <div class="command interactive-box" data-explanation="'display: grid;' permite a criação de layouts em grade.  
+É ideal para layouts responsivos e complexos.">
+          display: grid;
+        </div>
+        <div class="command interactive-box" data-explanation="'display: block;' faz com que o elemento ocupe toda a largura disponível.">
+          display: block;
+        </div>
+      </div>
+      <div class="position-commands">
+        <div class="command interactive-box" data-explanation="'position: relative;' posiciona um elemento de forma relativa à sua posição original.">
+          position: relative;
+        </div>
+        <div class="command interactive-box" data-explanation="'position: absolute;' retira o elemento do fluxo normal e o posiciona em relação ao seu ancestral posicionado.">
+          position: absolute;
+        </div>
+        <div class="command interactive-box" data-explanation="'position: fixed;' fixa o elemento na viewport, útil para barras e botões.">
+          position: fixed;
+        </div>
+      </div>
+    </section>
 
-        <!-- Secção Flexbox -->
-        <section id="flexbox">
-            <h2>Flexbox Example</h2>
-            <div class="code-block">
-                <code>
-                    .container {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
-                </code>
-            </div>
-        </section>
-    </main>
+    <!-- Seção Flexbox -->
+    <section id="flexbox">
+      <h2>Flexbox Example</h2>
+      <div class="code-block interactive-box" data-explanation="Este exemplo utiliza flexbox para centralizar itens horizontal e verticalmente.  
+Os valores 'justify-content: center' e 'align-items: center' garantem uma centralização precisa.">
+        <code>
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+        </code>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2025 Website Design System</p>
-    </footer>
+  <footer>
+    <p>&copy; 2025 Website Design System</p>
+  </footer>
 
-    <script src="./assets/js/script.js"></script>
+  <!-- Cartão de Explicação (Overlay) – exibido sem animações chamativas -->
+  <div id="card-overlay" class="card-overlay">
+    <button class="card-close">&times;</button>
+    <div class="card-content">Explicação...</div>
+  </div>
+
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
-
