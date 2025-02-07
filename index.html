@@ -7,34 +7,35 @@
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
-  <header>
-    <nav class="navbar">
-      <div class="nav-left">
-        <h1>Website Design System v1.0</h1>
-      </div>
-      <div class="nav-right">
-        <ul>
-          <li><a href="#colors">Colors</a></li>
-          <li><a href="#fonts">Fonts</a></li>
-          <li class="dropdown">
-            <a href="#">Components</a>
-            <ul class="dropdown-menu">
-              <li><a href="#text-styles">Text Styles</a></li>
-              <li><a href="#display-position">Display &amp; Position</a></li>
-              <li><a href="#flexbox">Flexbox</a></li>
+    <header>
+        <nav class="navbar">
+          <div class="nav-left">
+            <h1>Website Design System v1.0</h1>
+          </div>
+          <div class="nav-right">
+            <ul>
+              <li><a href="#colors">Colors</a></li>
+              <li><a href="#fonts">Fonts</a></li>
+              <li class="dropdown">
+                <a href="#">Components</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#text-styles">Text Styles</a></li>
+                  <li><a href="#display-position">Display &amp; Position</a></li>
+                  <li><a href="#flexbox">Flexbox</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#">Guidelines</a>
+                <ul class="dropdown-menu">
+                  <li><a href="#wireframing">Wireframing</a></li>
+                  <li><a href="#project-setup">Como Começar</a></li>
+                </ul>
+              </li>
             </ul>
-          </li>
-          <li class="dropdown">
-            <a href="#">Guidelines</a>
-            <ul class="dropdown-menu">
-              <li><a href="#wireframing">Wireframing</a></li>
-              <li><a href="#project-setup">Como Começar</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+          </div>
+        </nav>
+      </header>
+      
 
   <main>
     <h1>Bem-vindo ao Recurso Técnico de Web Design</h1>
@@ -43,60 +44,306 @@
     <!-- Seção de Cores -->
     <section id="colors">
       <h2>Color Palette</h2>
-      <div class="color-palette">
-        <!-- Exemplo: usamos algumas cores com tons pastel (as demais podem ser adicionadas seguindo o mesmo padrão) -->
-        <div class="color-box" style="background-color: var(--pastel-white);">
-          <span class="color-code">#ffffff</span>
+
+      <!-- Grupo: Cores Pastel e Suaves -->
+      <div class="color-category">
+        <h3>Cores Pastel e Suaves</h3>
+        <div class="color-grid">
+          <div class="color-box" style="background-color: #51e2f5;">
+            <span class="color-code">Bright Blue<br>#51e2f5</span>
+          </div>
+          <div class="color-box" style="background-color: #9df9ef;">
+            <span class="color-code">Blue Green<br>#9df9ef</span>
+          </div>
+          <div class="color-box" style="background-color: #edf756;">
+            <span class="color-code">Dusty White<br>#edf756</span>
+          </div>
+          <div class="color-box" style="background-color: #ffa8b6;">
+            <span class="color-code">Pink Sand<br>#ffa8b6</span>
+          </div>
+          <div class="color-box" style="background-color: #a28089;">
+            <span class="color-code">Dark Sand<br>#a28089</span>
+          </div>
+          <div class="color-box" style="background-color: #a0d2eb;">
+            <span class="color-code">Ice Cold<br>#a0d2eb</span>
+          </div>
+          <div class="color-box" style="background-color: #e5eaf5;">
+            <span class="color-code">Freeze Purple<br>#e5eaf5</span>
+          </div>
+          <div class="color-box" style="background-color: #d0bdf4;">
+            <span class="color-code">Medium Purple<br>#d0bdf4</span>
+          </div>
+          <div class="color-box" style="background-color: #8458b3;">
+            <span class="color-code">Purple Pain<br>#8458b3</span>
+          </div>
+          <div class="color-box" style="background-color: #a28089;">
+            <span class="color-code">Heavy Purple<br>#a28089</span>
+          </div>
         </div>
-        <div class="color-box" style="background-color: var(--pastel-black);">
-          <span class="color-code">#000000</span>
+      </div>
+
+      <!-- Grupo: Cores Vibrantes e Poderosas -->
+      <div class="color-category">
+        <h3>Cores Vibrantes e Poderosas</h3>
+        <div class="color-grid">
+          <div class="color-box" style="background-color: #ff1d58;">
+            <span class="color-code">Yass Queen (Pink)<br>#ff1d58</span>
+          </div>
+          <div class="color-box" style="background-color: #f75990;">
+            <span class="color-code">Sister Sister (Pink)<br>#f75990</span>
+          </div>
+          <div class="color-box" style="background-color: #fff685;">
+            <span class="color-code">Crown Yellow<br>#fff685</span>
+          </div>
+          <div class="color-box" style="background-color: #00ddff;">
+            <span class="color-code">Blue Light<br>#00ddff</span>
+          </div>
+          <div class="color-box" style="background-color: #0049b7;">
+            <span class="color-code">Brutal Blue<br>#0049b7</span>
+          </div>
         </div>
-        <div class="color-box" style="background-color: var(--pastel-red);">
-          <span class="color-code">#FFCDD2</span>
+      </div>
+
+      <!-- Grupo: Esquemas Terrosos e Naturais -->
+      <div class="color-category">
+        <h3>Esquemas Terrosos e Naturais</h3>
+        <div class="color-grid">
+          <div class="color-box" style="background-color: #a47864;">
+            <span class="color-code">Mocha Mousse<br>#a47864</span>
+          </div>
+          <div class="color-box" style="background-color: #e2725b;">
+            <span class="color-code">Terracotta Red<br>#e2725b</span>
+          </div>
+          <div class="color-box" style="background-color: #e1b382;">
+            <span class="color-code">Sand Tan<br>#e1b382</span>
+          </div>
+          <div class="color-box" style="background-color: #c89666;">
+            <span class="color-code">Sand Tan Shadow<br>#c89666</span>
+          </div>
+          <div class="color-box" style="background-color: #2d545e;">
+            <span class="color-code">Night Blue<br>#2d545e</span>
+          </div>
         </div>
-        <div class="color-box" style="background-color: var(--pastel-pink);">
-          <span class="color-code">#F8BBD0</span>
+      </div>
+
+      <!-- Grupo: Esquemas Retro Inspirados nos Anos 70 -->
+      <div class="color-category">
+        <h3>Esquemas Retro Inspirados nos Anos 70</h3>
+        <div class="color-grid">
+          <div class="color-box" style="background-color: #101357;">
+            <span class="color-code">Mountain Shadow Blue<br>#101357</span>
+          </div>
+          <div class="color-box" style="background-color: #fea49f;">
+            <span class="color-code">Old Makeup Pink<br>#fea49f</span>
+          </div>
+          <div class="color-box" style="background-color: #fbaf08;">
+            <span class="color-code">Goldenrod Yellow<br>#fbaf08</span>
+          </div>
+          <div class="color-box" style="background-color: #00a0a0;">
+            <span class="color-code">Bluebell Light Blue<br>#00a0a0</span>
+          </div>
+          <div class="color-box" style="background-color: #007f4f;">
+            <span class="color-code">Bold 2019 Green<br>#007f4f</span>
+          </div>
         </div>
-        <div class="color-box" style="background-color: var(--pastel-purple);">
-          <span class="color-code">#E1BEE7</span>
+      </div>
+
+      <!-- Grupo: Cores para Contraste e Destaque -->
+      <div class="color-category">
+        <h3>Cores para Contraste e Destaque</h3>
+        <div class="color-grid">
+          <div class="color-box" style="background-color: #51d0de;">
+            <span class="color-code">Lightning Blue<br>#51d0de</span>
+          </div>
+          <div class="color-box" style="background-color: #bf4aa8;">
+            <span class="color-code">Lightning Purple<br>#bf4aa8</span>
+          </div>
+          <div class="color-box" style="background-color: #d9d9d9;">
+            <span class="color-code">Brain Wrinkle White<br>#d9d9d9</span>
+          </div>
+          <div class="color-box" style="background-color: #ff3a22;">
+            <span class="color-code">Redder Than You<br>#ff3a22</span>
+          </div>
+          <div class="color-box" style="background-color: #c7af6b;">
+            <span class="color-code">Goldi-lots<br>#c7af6b</span>
+          </div>
         </div>
-        <div class="color-box" style="background-color: var(--pastel-indigo);">
-          <span class="color-code">#C5CAE9</span>
+      </div>
+
+      <!-- Grupo: Cores Românticas e Femininas -->
+      <div class="color-category">
+        <h3>Cores Românticas e Femininas</h3>
+        <div class="color-grid">
+          <div class="color-box" style="background-color: #d58d8d;">
+            <span class="color-code">Muted Rose<br>#d58d8d</span>
+          </div>
+          <div class="color-box" style="background-color: #ff5e6c;">
+            <span class="color-code">Coral Pink<br>#ff5e6c</span>
+          </div>
+          <div class="color-box" style="background-color: #e4717a;">
+            <span class="color-code">Tango Pink<br>#e4717a</span>
+          </div>
+          <div class="color-box" style="background-color: #f9c5bd;">
+            <span class="color-code">Misty Mountain Pink<br>#f9c5bd</span>
+          </div>
+          <div class="color-box" style="background-color: #f7cac9;">
+            <span class="color-code">Champagne Pink<br>#f7cac9</span>
+          </div>
         </div>
-        <div class="color-box" style="background-color: var(--pastel-blue);">
-          <span class="color-code">#BBDEFB</span>
+      </div>
+
+      <!-- Grupo: Cores Modernas e Minimalistas -->
+      <div class="color-category">
+        <h3>Cores Modernas e Minimalistas</h3>
+        <div class="color-grid">
+          <div class="color-box" style="background-color: #acb7ae;">
+            <span class="color-code">Barely Green<br>#acb7ae</span>
+          </div>
+          <div class="color-box" style="background-color: #e4decd;">
+            <span class="color-code">Tan Blonde<br>#e4decd</span>
+          </div>
+          <div class="color-box" style="background-color: #c2b490;">
+            <span class="color-code">Blondey (Beige)<br>#c2b490</span>
+          </div>
+          <div class="color-box" style="background-color: #ffffff;">
+            <span class="color-code">Crisp White<br>#ffffff</span>
+          </div>
+          <div class="color-box" style="background-color: #101585;">
+            <span class="color-code">Navy Blue<br>#101585</span>
+          </div>
         </div>
-        <div class="color-box" style="background-color: var(--pastel-light-blue);">
-          <span class="color-code">#B3E5FC</span>
+      </div>
+
+      <!-- Grupo: Gradientes Cromáticos e Profundos -->
+      <div class="color-category">
+        <h3>Gradientes Cromáticos e Profundos</h3>
+        <div class="color-grid">
+          <div class="color-box" style="background-color: #0074e8;">
+            <span class="color-code">Electric Blue<br>#0074e8</span>
+          </div>
+          <div class="color-box" style="background-color: #fff700;">
+            <span class="color-code">Neon Yellow<br>#fff700</span>
+          </div>
+          <div class="color-box" style="background-color: #ff4500;">
+            <span class="color-code">Deep Orange<br>#ff4500</span>
+          </div>
+          <div class="color-box" style="background-color: #833ab4;">
+            <span class="color-code">Vivid Purple Start<br>#833ab4</span>
+          </div>
+          <div class="color-box" style="background-color: #fd1d1d;">
+            <span class="color-code">Vivid Purple End<br>#fd1d1d</span>
+          </div>
         </div>
-        <div class="color-box" style="background-color: var(--pastel-cyan);">
-          <span class="color-code">#B2EBF2</span>
+      </div>
+
+      <!-- Grupo: Cores Inspiradas na Natureza -->
+      <div class="color-category">
+        <h3>Cores Inspiradas na Natureza</h3>
+        <div class="color-grid">
+          <div class="color-box" style="background-color: #9bc400;">
+            <span class="color-code">Grassy Green<br>#9bc400</span>
+          </div>
+          <div class="color-box" style="background-color: #7c677f;">
+            <span class="color-code">Factory Stone Purple<br>#7c677f</span>
+          </div>
+          <div class="color-box" style="background-color: #f0fff0;">
+            <span class="color-code">Honeydew<br>#f0fff0</span>
+          </div>
+          <div class="color-box" style="background-color: #f08080;">
+            <span class="color-code">Light Coral<br>#f08080</span>
+          </div>
+          <div class="color-box" style="background-color: #ffddca;">
+            <span class="color-code">Unbleached Silk<br>#ffddca</span>
+          </div>
         </div>
-        <div class="color-box" style="background-color: var(--pastel-teal);">
-          <span class="color-code">#B2DFDB</span>
+      </div>
+
+      <!-- Grupo: Paletas Emocionais e Psicológicas - Cores Calmantes -->
+      <div class="color-category">
+        <h3>Paletas Emocionais e Psicológicas<br><small>Cores Calmantes</small></h3>
+        <div class="color-grid">
+          <div class="color-box" style="background-color: #A7C7E7;">
+            <span class="color-code">Azul Pastel<br>#A7C7E7</span>
+          </div>
+          <div class="color-box" style="background-color: #E6E6FA;">
+            <span class="color-code">Lavanda Suave<br>#E6E6FA</span>
+          </div>
+          <div class="color-box" style="background-color: #98FB98;">
+            <span class="color-code">Verde Menta<br>#98FB98</span>
+          </div>
+          <div class="color-box" style="background-color: #87CEEB;">
+            <span class="color-code">Azul Céu<br>#87CEEB</span>
+          </div>
+          <div class="color-box" style="background-color: #FFB6C1;">
+            <span class="color-code">Rosa Claro<br>#FFB6C1</span>
+          </div>
         </div>
-        <div class="color-box" style="background-color: var(--pastel-green);">
-          <span class="color-code">#C8E6C9</span>
+      </div>
+
+      <!-- Grupo: Paletas Emocionais e Psicológicas - Cores Energéticas -->
+      <div class="color-category">
+        <h3>Paletas Emocionais e Psicológicas<br><small>Cores Energéticas</small></h3>
+        <div class="color-grid">
+          <div class="color-box" style="background-color: #FF2400;">
+            <span class="color-code">Vermelho Paixão<br>#FF2400</span>
+          </div>
+          <div class="color-box" style="background-color: #FF4500;">
+            <span class="color-code">Laranja Energia<br>#FF4500</span>
+          </div>
+          <div class="color-box" style="background-color: #FFD700;">
+            <span class="color-code">Amarelo Solar<br>#FFD700</span>
+          </div>
+          <div class="color-box" style="background-color: #32CD32;">
+            <span class="color-code">Verde Limão<br>#32CD32</span>
+          </div>
+          <div class="color-box" style="background-color: #FF00FF;">
+            <span class="color-code">Magenta Vibrante<br>#FF00FF</span>
+          </div>
         </div>
-        <div class="color-box" style="background-color: var(--pastel-light-green);">
-          <span class="color-code">#DCEDC8</span>
+      </div>
+
+      <!-- Grupo: Paletas Experimentais - Cores Futuristas -->
+      <div class="color-category">
+        <h3>Paletas Experimentais<br><small>Cores Futuristas</small></h3>
+        <div class="color-grid">
+          <div class="color-box" style="background-color: #00FFFF;">
+            <span class="color-code">Ciano Neon<br>#00FFFF</span>
+          </div>
+          <div class="color-box" style="background-color: #8A2BE2;">
+            <span class="color-code">Roxo Ultravioleta<br>#8A2BE2</span>
+          </div>
+          <div class="color-box" style="background-color: #00FF00;">
+            <span class="color-code">Verde Cyberpunk<br>#00FF00</span>
+          </div>
+          <div class="color-box" style="background-color: #FF1493;">
+            <span class="color-code">Rosa Sintético<br>#FF1493</span>
+          </div>
+          <div class="color-box" style="background-color: #0000FF;">
+            <span class="color-code">Azul Elétrico<br>#0000FF</span>
+          </div>
         </div>
-        <div class="color-box" style="background-color: var(--pastel-lime);">
-          <span class="color-code">#F0F4C3</span>
+      </div>
+
+      <!-- Grupo: Paletas de Alto Contraste -->
+      <div class="color-category">
+        <h3>Paletas de Alto Contraste</h3>
+        <div class="color-grid">
+          <div class="color-box" style="background-color: #000000;">
+            <span class="color-code">Preto Absoluto<br>#000000</span>
+          </div>
+          <div class="color-box" style="background-color: #FFFFFF;">
+            <span class="color-code">Branco Puro<br>#FFFFFF</span>
+          </div>
+          <div class="color-box" style="background-color: #FF0000;">
+            <span class="color-code">Vermelho Intenso<br>#FF0000</span>
+          </div>
+          <div class="color-box" style="background-color: #00FF00;">
+            <span class="color-code">Verde Limão<br>#00FF00</span>
+          </div>
+          <div class="color-box" style="background-color: #FFFF00;">
+            <span class="color-code">Amarelo Choque<br>#FFFF00</span>
+          </div>
         </div>
-        <div class="color-box" style="background-color: var(--pastel-yellow);">
-          <span class="color-code">#FFF9C4</span>
-        </div>
-        <div class="color-box" style="background-color: var(--pastel-amber);">
-          <span class="color-code">#FFECB3</span>
-        </div>
-        <div class="color-box" style="background-color: var(--pastel-orange);">
-          <span class="color-code">#FFE0B2</span>
-        </div>
-        <div class="color-box" style="background-color: var(--pastel-deep-orange);">
-          <span class="color-code">#FFCCBC</span>
-        </div>
-        <!-- Continue adicionando outras cores (até alcançar 70-80 cores) -->
       </div>
     </section>
 
@@ -224,7 +471,7 @@ Experimente ajustar 'justify-content' e 'align-items' para diferentes alinhament
 └── README.md
       </pre>
       <p>
-        Uma estrutura organizada facilita a manutenção e escalabilidade do projeto.
+        Uma estrutura organizada facilita a manutenção e a escalabilidade do projeto.
       </p>
     </section>
   </main>

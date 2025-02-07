@@ -5,9 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
     function openCard(e) {
       const box = e.currentTarget;
-      // Atualiza o conteúdo do cartão com a explicação técnica
       cardContent.innerText = box.getAttribute('data-explanation') || 'Sem explicação disponível.';
-      // Posiciona o overlay centralizado
       cardOverlay.style.top = '50%';
       cardOverlay.style.left = '50%';
       cardOverlay.style.transform = 'translate(-50%, -50%)';
@@ -18,15 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
       cardOverlay.classList.remove('active');
     }
   
-    // Adiciona os eventos de clique nos elementos interativos
     document.querySelectorAll('.interactive-box').forEach(box => {
       box.addEventListener('click', openCard);
     });
   
-    // Fecha o cartão ao clicar no botão de fechar
     cardClose.addEventListener('click', closeCard);
   
-    // Fecha o cartão ao clicar fora do conteúdo (no overlay)
     cardOverlay.addEventListener('click', (e) => {
       if (e.target === cardOverlay) {
         closeCard();
