@@ -194,27 +194,32 @@ header {
   /* --- Blocos de Código e Comandos --- */
   .code-block,
   .command {
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-    padding: 20px;
-    background: #fff;
-    margin: 10px auto;
-    max-width: 600px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px); 
+    padding: 30px;
     text-align: left;
-    font-family: monospace;
-    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 20px;
   }
   .code-block:hover,
   .command:hover {
     background-color: #f9f9f9;
+    transform: translateY(-5px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
   }
   .display-commands,
   .position-commands {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 20px auto;
-    max-width: 500px;
+    flex-wrap: wrap; /* Permite que os cartões se ajustem em telas menores */
+    justify-content: center;
+    gap: 30px; /* Espaçamento entre os cartões */
+    
   }
   
   /* ===== 4. Elementos Interativos ===== */
