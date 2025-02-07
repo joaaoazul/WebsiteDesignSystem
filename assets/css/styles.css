@@ -1,14 +1,38 @@
 /* ===== 1. Variáveis, Reset e Tipografia ===== */
 :root {
     --background-color: #fafafa;
-    --primary-text: #1a1a1a;
-    --secondary-text: #4d4d4d;
+    --primary-text: #333333;
+    --secondary-text: #666666;
     --hover-bg: #333333;
     --hover-text: #ffffff;
     --border-color: #e3e3e3;
     --highlight-bg: #f0f0f0;
     --highlight-border: #dcdcdc;
     --max-width: 1200px;
+    /* Cores para a paleta – tons pastel, de acento e secundários */
+    --pastel-white: #ffffff;
+    --pastel-black: #000000;
+    --pastel-red: #FFCDD2;
+    --pastel-pink: #F8BBD0;
+    --pastel-purple: #E1BEE7;
+    --pastel-indigo: #C5CAE9;
+    --pastel-blue: #BBDEFB;
+    --pastel-light-blue: #B3E5FC;
+    --pastel-cyan: #B2EBF2;
+    --pastel-teal: #B2DFDB;
+    --pastel-green: #C8E6C9;
+    --pastel-light-green: #DCEDC8;
+    --pastel-lime: #F0F4C3;
+    --pastel-yellow: #FFF9C4;
+    --pastel-amber: #FFECB3;
+    --pastel-orange: #FFE0B2;
+    --pastel-deep-orange: #FFCCBC;
+    --pastel-brown: #D7CCC8;
+    --pastel-grey: #F5F5F5;
+    --pastel-blue-grey: #CFD8DC;
+    /* Cores de acento (exemplo) */
+    --accent-color: #a8dadc;
+    --secondary-bg: #f1faee;
   }
   
   * {
@@ -30,31 +54,65 @@
   /* ===== 2. Header e Navbar ===== */
   header {
     width: 100%;
-    padding: 20px 0;
+    padding: 10px 0;
     border-bottom: 1px solid var(--border-color);
+    background-color: var(--secondary-bg);
   }
-  nav {
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
   }
-  nav h1 {
+  .nav-left h1 {
     font-size: 1.8rem;
+    color: var(--primary-text);
+    margin: 0;
   }
-  nav ul {
+  .nav-right ul {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 20px;
   }
-  nav ul li a {
-    padding: 10px 15px;
+  .nav-right ul li a {
+    padding: 8px 12px;
     text-decoration: none;
     color: var(--primary-text);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    display: block;
   }
-  nav ul li a:hover {
-    background-color: var(--hover-bg);
+  .nav-right ul li a:hover {
+    background-color: var(--accent-color);
     color: var(--hover-text);
-    border-radius: 3px;
+  }
+  
+  /* Dropdowns */
+  .dropdown {
+    position: relative;
+  }
+  .dropdown > a::after {
+    content: " ▼";
+    font-size: 0.8rem;
+  }
+  .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    background-color: var(--secondary-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    min-width: 150px;
+    z-index: 1000;
+  }
+  .dropdown-menu li a {
+    padding: 8px 12px;
+    white-space: nowrap;
+  }
+  .dropdown:hover .dropdown-menu {
+    display: block;
   }
   
   /* ===== 3. Main e Seções ===== */
@@ -88,7 +146,7 @@
     position: relative;
     cursor: pointer;
     border: 1px solid var(--border-color);
-    background: #fff;
+    background: var(--pastel-white);
     border-radius: 4px;
   }
   .color-box:hover {
@@ -137,9 +195,8 @@
   }
   
   /* ===== 4. Elementos Interativos ===== */
-  /*.interactive-box {
-     Sem transições exageradas – apenas mudança de fundo no hover 
-  }*/
+  /* (Sem transições chamativas – apenas mudanças simples de fundo no hover) */
+  .interactive-box { }
   
   /* ===== 5. Cartão de Explicação (Overlay) ===== */
   .card-overlay {
@@ -182,8 +239,8 @@
   
   /* ===== 7. Responsividade ===== */
   @media (max-width: 768px) {
-    nav ul { gap: 10px; }
-    nav h1 { font-size: 1.5rem; }
+    .nav-right ul { gap: 10px; }
+    .nav-left h1 { font-size: 1.5rem; }
     main h1 { font-size: 2rem; }
     main h2 { font-size: 1.5rem; }
     .color-palette {
@@ -192,7 +249,7 @@
     }
   }
   @media (max-width: 480px) {
-    nav ul {
+    .nav-right ul {
       flex-direction: column;
       align-items: flex-start;
       gap: 5px;

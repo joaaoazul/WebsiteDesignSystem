@@ -8,57 +8,95 @@
 </head>
 <body>
   <header>
-    <nav>
-      <h1>Website Design System v1.0</h1>
-      <ul>
-        <li><a href="#colors">Colors</a></li>
-        <li><a href="#fonts">Fonts</a></li>
-        <li><a href="#text-styles">Text Styles</a></li>
-        <li><a href="#display-position">Display & Position</a></li>
-        <li><a href="#flexbox">Flexbox</a></li>
-      </ul>
+    <nav class="navbar">
+      <div class="nav-left">
+        <h1>Website Design System v1.0</h1>
+      </div>
+      <div class="nav-right">
+        <ul>
+          <li><a href="#colors">Colors</a></li>
+          <li><a href="#fonts">Fonts</a></li>
+          <li class="dropdown">
+            <a href="#">Components</a>
+            <ul class="dropdown-menu">
+              <li><a href="#text-styles">Text Styles</a></li>
+              <li><a href="#display-position">Display &amp; Position</a></li>
+              <li><a href="#flexbox">Flexbox</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Guidelines</a>
+            <ul class="dropdown-menu">
+              <li><a href="#wireframing">Wireframing</a></li>
+              <li><a href="#project-setup">Como Começar</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </nav>
   </header>
 
   <main>
-    <h1>Bem-vindo ao Web Design System</h1>
-    <h2>Versão 1.1.0</h2>
+    <h1>Bem-vindo ao Recurso Técnico de Web Design</h1>
+    <h2>Versão 1.0.0</h2>
 
     <!-- Seção de Cores -->
     <section id="colors">
       <h2>Color Palette</h2>
       <div class="color-palette">
-        <!-- Ampla variedade de cores -->
-        <div class="color-box" style="background-color: #fafafa;">
-          <span class="color-code">#fafafa</span>
+        <!-- Exemplo: usamos algumas cores com tons pastel (as demais podem ser adicionadas seguindo o mesmo padrão) -->
+        <div class="color-box" style="background-color: var(--pastel-white);">
+          <span class="color-code">#ffffff</span>
         </div>
-        <div class="color-box" style="background-color: #e3e3e3;">
-          <span class="color-code">#e3e3e3</span>
+        <div class="color-box" style="background-color: var(--pastel-black);">
+          <span class="color-code">#000000</span>
         </div>
-        <div class="color-box" style="background-color: #ee6f57;">
-          <span class="color-code">#ee6f57</span>
+        <div class="color-box" style="background-color: var(--pastel-red);">
+          <span class="color-code">#FFCDD2</span>
         </div>
-        <div class="color-box" style="background-color: #cb3737;">
-          <span class="color-code">#cb3737</span>
+        <div class="color-box" style="background-color: var(--pastel-pink);">
+          <span class="color-code">#F8BBD0</span>
         </div>
-        <div class="color-box" style="background-color: #007AFF;">
-          <span class="color-code">#007AFF</span>
+        <div class="color-box" style="background-color: var(--pastel-purple);">
+          <span class="color-code">#E1BEE7</span>
         </div>
-        <div class="color-box" style="background-color: #FF9500;">
-          <span class="color-code">#FF9500</span>
+        <div class="color-box" style="background-color: var(--pastel-indigo);">
+          <span class="color-code">#C5CAE9</span>
         </div>
-        <div class="color-box" style="background-color: #FF2D55;">
-          <span class="color-code">#FF2D55</span>
+        <div class="color-box" style="background-color: var(--pastel-blue);">
+          <span class="color-code">#BBDEFB</span>
         </div>
-        <div class="color-box" style="background-color: #4CD964;">
-          <span class="color-code">#4CD964</span>
+        <div class="color-box" style="background-color: var(--pastel-light-blue);">
+          <span class="color-code">#B3E5FC</span>
         </div>
-        <div class="color-box" style="background-color: #5856D6;">
-          <span class="color-code">#5856D6</span>
+        <div class="color-box" style="background-color: var(--pastel-cyan);">
+          <span class="color-code">#B2EBF2</span>
         </div>
-        <div class="color-box" style="background-color: #FFCC00;">
-          <span class="color-code">#FFCC00</span>
+        <div class="color-box" style="background-color: var(--pastel-teal);">
+          <span class="color-code">#B2DFDB</span>
         </div>
+        <div class="color-box" style="background-color: var(--pastel-green);">
+          <span class="color-code">#C8E6C9</span>
+        </div>
+        <div class="color-box" style="background-color: var(--pastel-light-green);">
+          <span class="color-code">#DCEDC8</span>
+        </div>
+        <div class="color-box" style="background-color: var(--pastel-lime);">
+          <span class="color-code">#F0F4C3</span>
+        </div>
+        <div class="color-box" style="background-color: var(--pastel-yellow);">
+          <span class="color-code">#FFF9C4</span>
+        </div>
+        <div class="color-box" style="background-color: var(--pastel-amber);">
+          <span class="color-code">#FFECB3</span>
+        </div>
+        <div class="color-box" style="background-color: var(--pastel-orange);">
+          <span class="color-code">#FFE0B2</span>
+        </div>
+        <div class="color-box" style="background-color: var(--pastel-deep-orange);">
+          <span class="color-code">#FFCCBC</span>
+        </div>
+        <!-- Continue adicionando outras cores (até alcançar 70-80 cores) -->
       </div>
     </section>
 
@@ -80,9 +118,8 @@
     <!-- Seção de Estilos de Texto -->
     <section id="text-styles">
       <h2>Text Styles</h2>
-      <!-- Bloco interativo com explicação técnica -->
       <div class="code-block interactive-box" data-explanation="Este código define o estilo dos títulos h1 utilizando 'font-size: 2.5rem' e 'font-weight: bold'.  
-Utilize estes valores para criar hierarquias visuais claras.">
+Utilize estes valores para estabelecer hierarquias visuais claras e consistentes.">
         <code>
 h1 {
     font-size: 2.5rem;
@@ -94,28 +131,27 @@ h1 {
 
     <!-- Seção de Display & Position -->
     <section id="display-position">
-      <h2>Display & Position Commands</h2>
+      <h2>Display &amp; Position Commands</h2>
       <div class="display-commands">
-        <div class="command interactive-box" data-explanation="'display: flex;' organiza os elementos em linha ou coluna com flexibilidade.  
-Experimente os valores de 'justify-content' e 'align-items' para diferentes alinhamentos.">
+        <div class="command interactive-box" data-explanation="'display: flex;' organiza os elementos de forma flexível.  
+Experimente ajustar 'justify-content' e 'align-items' para diferentes alinhamentos.">
           display: flex;
         </div>
-        <div class="command interactive-box" data-explanation="'display: grid;' permite a criação de layouts em grade.  
-É ideal para layouts responsivos e complexos.">
+        <div class="command interactive-box" data-explanation="'display: grid;' possibilita a criação de layouts em grade, ideal para designs responsivos.">
           display: grid;
         </div>
-        <div class="command interactive-box" data-explanation="'display: block;' faz com que o elemento ocupe toda a largura disponível.">
+        <div class="command interactive-box" data-explanation="'display: block;' faz com que o elemento ocupe toda a largura disponível, forçando quebra de linha.">
           display: block;
         </div>
       </div>
       <div class="position-commands">
-        <div class="command interactive-box" data-explanation="'position: relative;' posiciona um elemento de forma relativa à sua posição original.">
+        <div class="command interactive-box" data-explanation="'position: relative;' posiciona o elemento em relação à sua posição original, sem removê-lo do fluxo.">
           position: relative;
         </div>
-        <div class="command interactive-box" data-explanation="'position: absolute;' retira o elemento do fluxo normal e o posiciona em relação ao seu ancestral posicionado.">
+        <div class="command interactive-box" data-explanation="'position: absolute;' retira o elemento do fluxo normal e o posiciona de forma independente, geralmente em relação a um ancestral posicionado.">
           position: absolute;
         </div>
-        <div class="command interactive-box" data-explanation="'position: fixed;' fixa o elemento na viewport, útil para barras e botões.">
+        <div class="command interactive-box" data-explanation="'position: fixed;' fixa o elemento na viewport, mantendo-o visível durante a rolagem.">
           position: fixed;
         </div>
       </div>
@@ -124,8 +160,8 @@ Experimente os valores de 'justify-content' e 'align-items' para diferentes alin
     <!-- Seção Flexbox -->
     <section id="flexbox">
       <h2>Flexbox Example</h2>
-      <div class="code-block interactive-box" data-explanation="Este exemplo utiliza flexbox para centralizar itens horizontal e verticalmente.  
-Os valores 'justify-content: center' e 'align-items: center' garantem uma centralização precisa.">
+      <div class="code-block interactive-box" data-explanation="Este exemplo utiliza flexbox para centralizar itens tanto horizontal quanto verticalmente.  
+'justify-content: center' e 'align-items: center' garantem uma centralização precisa.">
         <code>
 .container {
     display: flex;
@@ -134,6 +170,62 @@ Os valores 'justify-content: center' e 'align-items: center' garantem uma centra
 }
         </code>
       </div>
+    </section>
+
+    <!-- Seção Wireframing -->
+    <section id="wireframing">
+      <h2>Wireframing</h2>
+      <p>
+        O wireframing é a base para o design inicial de um site. Ele define a estrutura, a hierarquia e o fluxo das informações sem se preocupar com os detalhes visuais.
+      </p>
+      <p>
+        <strong>Aspectos Importantes:</strong>
+      </p>
+      <ul>
+        <li>Definir a hierarquia de informações e a disposição dos elementos.</li>
+        <li>Criar um fluxo de navegação intuitivo.</li>
+        <li>Planejar espaços para conteúdo, imagens e CTAs.</li>
+        <li>Manter consistência na disposição para facilitar iterações futuras.</li>
+      </ul>
+      <p>
+        <em>Dicas:</em> Utilize ferramentas como Figma, Sketch ou Balsamiq para criar wireframes colaborativos.
+      </p>
+      <img src="https://via.placeholder.com/600x400?text=Exemplo+de+Wireframe" alt="Exemplo de Wireframe" style="max-width:100%; height:auto; border:1px solid #ccc;">
+    </section>
+
+    <!-- Seção Como Começar -->
+    <section id="project-setup">
+      <h2>Como Começar: Configuração do Projeto</h2>
+      <p>
+        Iniciar um projeto web exige planejamento tanto do design quanto da organização do ambiente de trabalho.
+      </p>
+      <p>
+        <strong>Passos Fundamentais:</strong>
+      </p>
+      <ul>
+        <li>Crie uma estrutura de diretórios organizada (ex.: /assets/css, /assets/js, /assets/img).</li>
+        <li>Defina um padrão de nomenclatura para classes e ids.</li>
+        <li>Utilize versionamento (por exemplo, Git) para acompanhar as mudanças.</li>
+        <li>Planeje as etapas: wireframe, design, desenvolvimento, testes e deploy.</li>
+      </ul>
+      <p>
+        <strong>Exemplo de Estrutura de Diretórios:</strong>
+      </p>
+      <pre style="text-align:left; background:#f5f5f5; padding:10px; border:1px solid #e3e3e3;">
+/my-website/
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── script.js
+│   └── img/
+│       └── (imagens do site)
+├── index.html
+└── README.md
+      </pre>
+      <p>
+        Uma estrutura organizada facilita a manutenção e escalabilidade do projeto.
+      </p>
     </section>
   </main>
 

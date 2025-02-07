@@ -5,9 +5,9 @@ document.addEventListener('DOMContentLoaded', function() {
   
     function openCard(e) {
       const box = e.currentTarget;
-      // Atualiza o conteúdo do cartão com a explicação
+      // Atualiza o conteúdo do cartão com a explicação técnica
       cardContent.innerText = box.getAttribute('data-explanation') || 'Sem explicação disponível.';
-      // Exibe o overlay centralizado
+      // Posiciona o overlay centralizado
       cardOverlay.style.top = '50%';
       cardOverlay.style.left = '50%';
       cardOverlay.style.transform = 'translate(-50%, -50%)';
